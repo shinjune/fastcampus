@@ -1,20 +1,69 @@
 @charset "utf-8";
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
+@import url("./normalize.css");
+@import url("./fonts.css");
+*, *::before, *::after {
   box-sizing: border-box;
   /* border-box를 설정안해주면 content-box로 설정됨. */
 }
 
+/* css reset */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 /* .main-content::after{
     content: ""
     background-color: olive;
-    display: block;
+    display: block;>
     clear: both;
 } */
+
+
+/* 본문스타일 */
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Noto Sans Regular', sans-serif;
+  font-size: 1.4rem;
+  color: #181818;
+  background-color: #fff;
+}
+
+/* rem inherits from Root size vs em inherits from parent font size */
+
+
+/* link style */
+
+a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+  /* underline decoration */
+}
+a:hover, a:focus {
+  color: #f00;
+}
+
+/* a:visited {
+  color: #666;
+} */
+
+
+/* load noto sans regular if impossible, load sans-serif */
 
 
 /* * is universal element */
@@ -25,34 +74,68 @@
 
 /* layout architect */
 
+.clearfix::after {
+  content: "";
+  background-color: olive;
+  clear: both;
+  display: block;
+}
 .container {
   background-color: #aaaaaa;
   height: 100vh;
 }
 
-
 /* vh는 viewport height의 abbrev. */
 
-.header,
-.visual,
-.main-content,
-.slogan,
-.footer {
+.header, .visual, .main-content, .slogan, .footer {
   width: 940px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* clockwise로 4가지임. 2개로 쓰면 위아래 & 좌우. 0가 위아래 auto는 자동적으로 좌우가 되겠지*/
 }
-
 .header {
-  background-color: yellow;
-  height: 110px;
+  background-color: #fff;
+  position: relative;
 }
+
+/* logo */
+
+.logo {
+  position: absolute;
+  top: 45px;
+  left: 65px;
+}
+.member {
+  background-color: yellow;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 0;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: flex-end; */
+}
+.member li {
+  background-color: aqua;
+  display: inline-block;
+  font-size: 1.4rem;
+  width: 100px;
+  padding: 10px 0;
+}
+.member li::nth-child(n+2)::before {
+  content: ":"
+}
+
+/* .member>a {
+  background-color: lime;
+  padding: 8px 0;
+} */
+
+
+/* position은 float과는 다르게 content를 밀어내지 않고 덮어씌운다 */
 
 .visual {
-  background-color: blue;
+  background-color: pink;
   height: 120px;
 }
-
 .main-content {
   background-color: pink;
   height: 60vh;
@@ -70,39 +153,32 @@
   /* box-sizing: border-box; */
   /* border-box는 border와 padding을 포함 margin은 포함하지 않음 */
 }
-
 .group {
   background-color: lime;
   height: 20vh;
 }
-
 .group1 {
   width: 250px;
   /* align-self: cetner; */
   /* align-self는 자기 자신만 지정 */
 }
-
 .group2 {
   width: 380px;
   order: 1;
   /* 모든 순서는 0, 0, 0 이다. 1으로 지정해주니 오른쪽 간다 */
 }
-
 .group3 {
   width: 190px;
   order: -1;
 }
-
 .slogan {
   background-color: orange;
   height: 10vh;
   padding: 15px 0;
 }
-
 .footer-bg {
   background-color: purple;
 }
-
 .footer {
   background-color: lightblue;
   height: 10vh;
