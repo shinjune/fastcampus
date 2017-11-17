@@ -4,7 +4,7 @@
 
 ### code insert
 
-> 코드를 입력할 때는 escape character를 앞 뒤로 3번씩 넣는다
+> 코드를 입력할 때는 `를 앞 뒤로 3번씩 넣는다
 > when inputting indentation, use 'arrow'
 > when inputting 'url', use 'square braces' [trustar][http://www.trustar.co.kr]
 
@@ -110,15 +110,52 @@ z-index: -1;
 important 구체성 점수를 가리지 않고 최상위로 적용
 남발하면 문제됨.
 
-### clear
-floating element를 인정하느냐 마느냐
+### float & clear
+
+float을 하면 floating 되는 것 같다. 그래서 양 옆에 다른 text나 imgae가 올 수 있더라.
+
+clear는 floating element를 인정하느냐 마느냐
 clear: none이 default
-clear: both 이면 왼쪽 오른쪽 모두 floating element e.g. img 같은 것들이, 나의 시작점을 방해하지 못하게 함.
+clear는 float을 무시하는 것?
 좌우로 나를 가리지말고 비켜!
+The most common way to use the clear property is after you have used a float property on an element.
+
+
 
 ### text-transform
 toUpperCase toLowerCase method와 동일
 
-### 
+### inline-block
+inline-block을 하면 다른 element가 이 안으로 못 들어온다.
+floating하는 글은 위에서 아래로 가는 것을 봤다.
+
+### 명령어 이해
+
+``` 
+.main-menu span:hover::after, .main-menu>li:focus span::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
+}
+```
+
+main-menu의 span에 hovering을 하면 ::after를 실행해라
+
+```
+.main-menu span:hover, .main-menu>li:focus span {
+  color: yellow;
+}
+````
+
+main-munu의 li가 get focused then go 'span' and execute ::after
 
 
+
+### animation vs transformation vs transition
+
+
+
+### 'form' works with fieldset, legend
+
+### form에서 '아이디'는 입력칸의 서식을 알려주는 tag를 붙어야 함. #user-email 
+for라는 속성을 사용
