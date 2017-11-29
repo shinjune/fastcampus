@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/* all devices */
+
+body {
+  background: yellow;
+}
+
+/* more than tablets */
+
+@media screen and (min-width: 768px) {
+  body {
+    background: pink;
+  }
+}
+
+/* {}실수 많다. */

@@ -1,0 +1,279 @@
+@charset "utf-8";
+@import url("./normalize.css");
+@import url("./fonts.css");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* css reset */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* .main-content::after{
+    content: ""
+    background-color: olive;
+    display: block;>
+    clear: both;
+} */
+
+
+/* 본문스타일 */
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Noto Sans Regular', sans-serif;
+  font-size: 1.4rem;
+  color: #181818;
+  background-color: #fff;
+}
+
+/* link style */
+
+a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+  /* underline decoration */
+}
+a:hover, a:focus {
+  color: #f00;
+}
+
+/* contents disappearance */
+
+.readable-hidden, .a11y {
+  background-color: yellow;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  /* left: -9999em; */
+}
+
+/* 건너뛰기 링크*/
+
+.a11y:focus {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  z-index: 10;
+  transform: translatex(-50%);
+  clip: rect(auto, auto, auto, auto)
+}
+
+/* layout architect */
+
+.clearfix::after {
+  content: "";
+  background-color: olive;
+  clear: both;
+  display: block;
+}
+.container {
+  background-color: #aaaaaa;
+  height: 100vh;
+}
+.header, .visual, .main-content, .slogan, .footer {
+  width: 940px;
+  margin: 0 auto;
+}
+.header {
+  background-color: #fff;
+  position: relative;
+  padding: 0 30px 30px;
+  border-radius: 0 0 15px 15px;
+}
+
+/* logo */
+
+.logo {
+  position: absolute;
+  top: 48px;
+  left: 65px;
+}
+.member {
+  background-color: yellow;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 0;
+  transform: translateX(10px);
+}
+.member li {
+  background-color: aqua;
+  display: inline-block;
+  font-size: 1.4rem;
+  width: 100px;
+  padding: 10px 0;
+}
+.member li::nth-child(n+2)::before {
+  content: ":"
+}
+.member>a {
+  padding: 8px 0;
+}
+
+/* .member a:focus {
+  outline: 1px dotted #002;
+  outline-offset: 5px;
+} */
+
+.main-menu {
+  background: orange linear-gradient(to bottom, red 0%, blue 20%, green 100%);
+  border-top: 2px solid #000;
+  border-radius: 0 0 5px 5px;
+  height: 47px;
+  padding-left: 225px;
+}
+.main-menu>li {
+  float: left;
+  position: relative;
+}
+.main-menu>li:focus {
+  outline: none;
+}
+.main-menu span {
+  display: block;
+  line-height: 45px;
+  font-size: 1.6rem;
+  font-family: "Noto Sans Bold";
+  color: #fff;
+  padding: 0 20px;
+  cursor: pointer;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000;
+}
+.main-menu span:hover::after, .main-menu>li:focus span::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
+}
+
+/* main-menu의 span에 hovering을 하면 ::after를 실행해라 */
+
+
+/* main-munu의 li가 get focused then go 'span' and execute ::after */
+
+.main-menu span:hover, .main-menu>li:focus span {
+  color: yellow;
+}
+.sub-menu {
+  position: absolute;
+  background: yellow;
+  top: 47px;
+  white-space: nowrap;
+}
+.menu-act {
+  display: block !important;
+}
+
+/* white-space를 통해서 줄바뀜 금지 처리 */
+
+
+/* absolute의 특성은 static 한 곳을 올라가서 기준을 삼는다. 계속 올라가서 결국에는 body까지 */
+
+.about-html {
+  display: block;
+}
+.about-css {
+  display: none;
+}
+.web-standard {
+  display: none;
+}
+.web-accessibility {
+  display: block;
+  right: 0;
+}
+.questions-and-answers {
+  display: none;
+}
+.repository {
+  display: none;
+}
+.submenu li, .submenu a {
+  background: aqua;
+  display: inline-block;
+}
+.submenu a {
+  padding: 4px 10px 4px 0;
+}
+.submenu a::before {
+  content: "\e805";
+  font-family: "fontello";
+}
+
+/* position은 float과는 다르게 content를 밀어내지 않고 덮어씌운다 */
+
+.visual {
+  background-color: pink;
+  height: 120px;
+}
+.main-content {
+  background-color: pink;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  /* flex-direction: row-reverse; */
+  /* flex는 가로방향 */
+  /* justify-content: flex-end; */
+  justify-content: space-between;
+  /* justify-content: space-around; */
+  align-items: center;
+  /* items는 전체 위아래 정렬 */
+  padding: 30px 15px;
+  min-height: 400px;
+  /* box-sizing: border-box; */
+  /* border-box는 border와 padding을 포함 margin은 포함하지 않음 */
+}
+.group {
+  background-color: lime;
+  height: 20vh;
+}
+.group1 {
+  width: 250px;
+  /* align-self: cetner; */
+  /* align-self는 자기 자신만 지정 */
+}
+.group2 {
+  width: 380px;
+  order: 1;
+  /* 모든 순서는 0, 0, 0 이다. 1으로 지정해주니 오른쪽 간다 */
+}
+.group3 {
+  width: 190px;
+  order: -1;
+}
+.slogan {
+  background-color: orange;
+  height: 10vh;
+  padding: 15px 0;
+}
+.footer-bg {
+  background-color: purple;
+}
+.footer {
+  background-color: lightblue;
+  height: 10vh;
+  padding: 15px 0;
+}

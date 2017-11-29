@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>picture element</title>
+  <style>
+    .container {
+      width: 50%;
+      margin: 50px auto;
+    }
+    
+    .container picture,
+    .container img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+  <script>
+    document.createElement('picture');
+    // picture라는 요소를 하나 추가했다 왜? js를 쓰려고
+  </script>
+
+  <script src="js/picturefill.js">
+    // picturefill 파일은 IE11에서 picture가 제공되지 않아서 썼다
+  </script>
+
+</head>
+
+<body>
+  <h1>picture요소의 활용을 알려주마</h1>
+  <div class="container">
+    <picture>
+      <source srcset="/images/large.jpg" media="(min-width: 1025px)">
+      <source srcset="/images/medium.jpg" media="(min-width: 481px)">
+      <source srcset="/images/small.jpg" media="(min-width: 1px) and (max-width: 480px)">
+      <img srcset="images/normal.jpg" src="/images/normal.jpg" alt="picture 예제">
+
+    </picture>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>sprite 이미지</title>
+  <style>
+    div {
+      background: yellow;
+      overflow: hidden;
+    }
+    
+    span {
+      float: left;
+      background: pink;
+      /* display: inline-block; */
+      box-sizing: border-box;
+      padding-top: 19px;
+      width: 20px;
+      height: 19px;
+      overflow: hidden;
+      background: url("css/images/backpage_forwardpage.png") no-repeat;
+    }
+    /* span에 width줘도 안 먹는다 그래서 inline-block을 넣어준다 그러면 아래 노란색이 보여서 
+    float로 변경. 그리고 div에 overflow 추가 */
+    /* div의 자식인 span을 float 시켰더니 div의 배경색이 사라졌다. 그래서 hidden overflow */
+    
+    div span:nth-child(2) {
+      background-position: 90% 0%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>스프라이트 배경 이미지</h1>
+  <div>
+    <span>다음</span>
+    <span>이전</span>
+  </div>
+</body>
+
+</html>
