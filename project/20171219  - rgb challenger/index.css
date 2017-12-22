@@ -1,10 +1,21 @@
 .box {
   height: 50px;
   width: 50px;
-  border: 1px solid #181818;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transfrom 0.65s ease;
+  /* transition: transfrom 0.65s ease은 box안에 있어야 한다. 왜냐면 .box.show에 있으면
+  .box.show가 사라지면 같이 사라지기 때문 */
+}
+.box.show {
+  transform: scale()
+}
+.boxes {
+  display: flex;
 }
 html, body {
-  height: 100;
+  height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -31,11 +42,41 @@ html, body {
   font-size: 3em;
 }
 .game-center {
-  display: flex;
   flex-grow: 1;
-  align-items: center;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+.box:last-child {
+  margin-right: 0;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  /* 원래 flex였는데 보이지 않게 하기 위해서 none */
+  justify-content: center;
+  align-items: center;
+}
+.modal.show {
+  display: flex;
+  transition: all 0.45s ease;
+  transition-property: all;
+  transition-duration: 0.45s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+}
+
+/* .modal.show 붙여써야 한다. */
+
+.modal-button {
+  border: 1px solid white;
+  cursor: pointer;
+  padding: 10px;
 }
 
 /*

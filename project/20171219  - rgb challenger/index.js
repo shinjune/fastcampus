@@ -42,7 +42,6 @@ document.querySelectorAll('.box').forEach((el, index) => {
       // 다음 단계에 대한 상태로 넘어감
       nextStage();
       draw();
-
     } else {
       init()
       draw();
