@@ -966,3 +966,15 @@ b는 없다
 
 ### set
 Array.from(new Set('asdfasdf')).join('')
+
+
+
+
+
+###
+Jekyll
+Hexo
+above two are static web
+
+
+https://github.com/fds7/fds-handouts/blob/master/dom.md

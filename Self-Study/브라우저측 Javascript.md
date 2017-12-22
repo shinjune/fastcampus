@@ -33,3 +33,13 @@ el.innerHTML
 
 
 ### attribute element 조작하기
+
+
+
+### cloneNode
+clone을 할 때 child은 clone하지 못하고 그 자체만 복사한다(shallow copy)
+const newDiv = document.querySelector('div').cloneNode();
+
+deep copy를 하려면 true를 해야함
+const newDiv = document.querySelector('div').cloneNode();
+
