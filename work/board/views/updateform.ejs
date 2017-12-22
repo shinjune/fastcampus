@@ -19,7 +19,12 @@
     <table width="500" border="1">
       <tr>
         <th>글쓴이</th>
-        <td><input type="text" name="writer" value="<%=row.writer%>"></td>
+        <td>
+          <input type="hidden" name="num" value="<%=row.num%>">
+          <!-- hidden으로 글번호로 받아서 다음 페이지 post로 넘기는 것 - w중요 -->
+          <!-- source code로 value값 3으로 변한거 볼것 -->
+          <input type="text" name="writer" value="<%=row.writer%>">
+        </td>
       </tr>
       <tr>
         <th>비밀번호</th>

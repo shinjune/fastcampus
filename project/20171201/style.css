@@ -1,0 +1,274 @@
+@charset "utf-8";
+@import url("normalize.css");
+@import url("fonts/fonts.css");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body, button, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.container.show-grid::before {
+  content: '';
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200vh;
+  background: linear-gradient(90deg, hsla(357, 97%, 86%, 0.2) 120px, hsla(356, 95%, 68%, 0.2) 120px);
+  background-size: 240px 1px;
+}
+.clearFix::after, .row::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.row {
+  width: 100%;
+}
+.row [class*="col-"] {
+  float: left;
+  position: relative;
+}
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 960px;
+}
+.card-item {
+  position: relative;
+}
+.card-item-heading1 {
+  font-family: 'Varela Round Regular';
+  margin-top: 29px;
+  margin-left: 58px;
+  font-size: 12px;
+  height: 30px;
+  width: 130px;
+  text-align: center;
+}
+.card-item-img1 {
+  margin-top: 49px;
+  margin-bottom: 63px;
+}
+.card-item-description1 {
+  display: flex;
+  font-family: "Oswald Bold";
+  font-size: 12px;
+}
+.card-item-tag1 {
+  background-color: #ffc12b;
+  list-style: none;
+  color: white;
+  height: 18px;
+  width: 30px;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+  position: relative;
+}
+.card-item-price1 {
+  list-style: none;
+  margin-left: 45px;
+}
+.card-item-heading2 {
+  font-family: 'Varela Round Regular';
+  margin-top: 29px;
+  margin-left: 58px;
+  font-size: 12px;
+  height: 30px;
+  width: 130px;
+  text-align: center;
+}
+.card-item-img2 {
+  margin-top: 49px;
+  margin-bottom: 63px;
+}
+.card-item-description2 {
+  display: flex;
+  font-family: "Oswald Bold";
+  font-size: 12px;
+}
+.card-item-tag2 {
+  background-color: #ffc12b;
+  list-style: none;
+  color: white;
+  height: 18px;
+  width: 30px;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+  position: relative;
+}
+.card-item-price2 {
+  list-style: none;
+  margin-left: 45px;
+}
+.card-item-heading3 {
+  font-family: 'Varela Round Regular';
+  margin-top: 29px;
+  margin-left: 58px;
+  font-size: 12px;
+  height: 30px;
+  width: 130px;
+  text-align: center;
+}
+.card-item-img3 {
+  margin-top: 49px;
+  margin-bottom: 63px;
+}
+.card-item-description3 {
+  display: flex;
+  font-family: "Oswald Bold";
+  font-size: 12px;
+}
+.card-item-tag3 {
+  background-color: #ffc12b;
+  list-style: none;
+  color: white;
+  height: 18px;
+  width: 30px;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+  position: relative;
+}
+.card-item-price3 {
+  list-style: none;
+  margin-left: 72px;
+}
+
+/* column */
+
+.col-1 {
+  width: 120px;
+}
+.col-2 {
+  width: 240px;
+}
+.col-3 {
+  width: 360px;
+}
+.col-4 {
+  width: 480px;
+}
+.col-5 {
+  width: 600px;
+}
+.col-6 {
+  width: 720px;
+}
+.col-7 {
+  width: 840px;
+}
+.col-8 {
+  width: 960px;
+}
+
+/* push pull */
+
+.push-1 {
+  left: 120px;
+}
+.push-2 {
+  left: 240px;
+}
+.push-3 {
+  left: 360px;
+}
+.push-4 {
+  left: 480px;
+}
+.push-5 {
+  left: 600px;
+}
+.push-6 {
+  left: 720px;
+}
+.push-7 {
+  left: 840px;
+}
+.push-8 {
+  left: 960px;
+}
+.pull-1 {
+  right: 120px;
+}
+.pull-2 {
+  right: 240px;
+}
+.pull-3 {
+  right: 360px;
+}
+.pull-4 {
+  right: 480px;
+}
+.pull-5 {
+  right: 600px;
+}
+.pull-6 {
+  right: 720px;
+}
+.pull-7 {
+  right: 840px;
+}
+.pull-8 {
+  right: 960px;
+}
+
+/* prefix suffix*/
+
+.prefix-1 {
+  margin-left: 120px;
+}
+.prefix-2 {
+  margin-left: 240px;
+}
+.prefix-3 {
+  margin-left: 360px;
+}
+.prefix-4 {
+  margin-left: 480px;
+}
+.prefix-5 {
+  margin-left: 600px;
+}
+.prefix-6 {
+  margin-left: 720px;
+}
+.prefix-7 {
+  margin-left: 840px;
+}
+.prefix-8 {
+  margin-left: 960px;
+}
+.suffix-1 {
+  margin-right: 120px;
+}
+.suffix-2 {
+  margin-right: 240px;
+}
+.suffix-3 {
+  margin-right: 360px;
+}
+.suffix-4 {
+  margin-right: 480px;
+}
+.suffix-5 {
+  margin-right: 600px;
+}
+.suffix-6 {
+  margin-right: 720px;
+}
+.suffix-7 {
+  margin-right: 840px;
+}
+.suffix-8 {
+  margin-right: 960px;
+}

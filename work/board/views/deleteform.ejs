@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    <%=title%>
+  </title>
+</head>
+
+<body>
+  <h1>
+    <%=title%>
+  </h1>
+  <form action="/delete" method="post">
+    <input type="hidden" value="<%=row.num%>" name="num">
+    <!-- action과 method  이해 중요 -->
+    <!-- value와 name, type을 정해줘야 한다 -->
+    <table width="500" border="1">
+      <tr>
+        <th>삭제</th>
+        <tr>
+          <td colspan="2">
+            <input type="submit" value="삭제">
+            <!-- type을 submit으로 해야함 -->
+          </td>
+        </tr>
+    </table>
+  </form>
+</body>
+
+</html>

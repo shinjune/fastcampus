@@ -12,9 +12,10 @@ const pool = mysql.createPool(obj);
 
 const sql = "update member set name=?, email=?, tel=? where id=?";
 
-const arr = ['홍길순순순순', 'soon@a.com', '010-1111-2222', 'hong'];
+const arr = ['홍길순', 'soon@a.com', '010-1111-2222', 'hong'];
 
 pool.getConnection((err, conn) => {
+
   if (err) { console.log('err', err); return; }
 
   conn.query(sql, arr, (err, row) => {
