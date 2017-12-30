@@ -1,0 +1,348 @@
+  @charset "utf-8";
+  @import url("./normalize.css");
+  @import url("./css/fonts.css");
+  @import url("./css/font-awesome.css");
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html, body, button, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: "Varela Round Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    vertical-align: baseline;
+  }
+  a {
+    color: #999;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    border-width: 0 1px 4px 1px;
+  }
+  .navbar-collapse {
+    height: 70px;
+  }
+  .navbar-fixed-top {
+    height: 70px;
+  }
+  .navbar-header {
+    float: left;
+    width: 480px;
+    padding-left: 200px;
+    padding-top: 19.5px;
+  }
+  .navbar-nav {
+    display: grid;
+    grid-template-columns: [col-start] 10% [line2] 8% [line3] 6.5% [line4] 10% [line5] 15% [line6] 12.5% [line7]12.5% [line8] 25% [col-end];
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-top: 19.5px;
+    height: 50px;
+  }
+  .navbar-nav li a {
+    color: #999999;
+  }
+  .navbar-nav a:link {
+    text-decoration: none;
+  }
+  .navbar-nav a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    min-width: 150px;
+    background-color: #fff;
+    margin-top: 25px;
+  }
+  .dropdown-content li {
+    float: none;
+    line-height: 35px;
+    display: block;
+    background-color: white;
+  }
+  .dropdown-content li:hover {
+    background-color: blue;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+  }
+  .caret, .hidden-sm {
+    color: #999999;
+  }
+  .btn-secondary {
+    color: #878990;
+    border: 1px solid #e8e8e8;
+    display: inline;
+    padding: 9px 15px;
+    background-color: white;
+  }
+  .btn {
+    font-weight: bold;
+  }
+  .caret:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  .fc-green {
+    color: #18BC9c;
+  }
+  /* 숨김 콘텐츠 */
+  
+  .readable-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+  }
+  /* main body contents */
+  
+  .ptl {
+    padding-top: 15px;
+  }
+  .content-section {
+    font-size: 16px;
+  }
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .mbxl {
+    margin-bottom: 40px;
+  }
+  .mtxl {
+    margin-top: 40px;
+  }
+  h1 {
+    font-size: 39px;
+    margin-top: 21px;
+    line-height: 1.1;
+    font-weight: 400;
+  }
+  .text-center {
+    text-align: center;
+  }
+  p {
+    margin-bottom: 10.5px;
+    display: block;
+  }
+  .text-muted {
+    color: #82888a;
+    margin-bottom: 15px;
+  }
+  .text-left {
+    text-align: left;
+  }
+  /* .col-md-8, .col-md-offset-2 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  } */
+  
+  .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .rounded-corners {
+    border-radius: 5px !important;
+    overflow: hidden;
+  }
+  .row::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+  .row {
+    width: 100%;
+  }
+  .row [class*="col-"] {
+    float: left;
+    position: relative;
+  }
+  .content-section {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+  }
+  .mtm, .mts {
+    margin-top: 10px;
+    margin-bottom: 10.5px;
+  }
+  h4 {
+    font-size: 19px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  .mrs {
+    margin-right: 5px;
+  }
+  .fa {
+    display: inline-block;
+    text-rendering: auto;
+  }
+  .fa-linkedin-square::before {
+    content: "\f08c"
+  }
+  .mtl {
+    margin-top: 15px;
+  }
+  /* column */
+  
+  .col-1 {
+    width: 120px;
+  }
+  .col-2 {
+    width: 240px;
+  }
+  .col-3 {
+    width: 360px;
+  }
+  .col-4 {
+    width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-5 {
+    width: 600px;
+  }
+  .col-6 {
+    width: 720px;
+  }
+  .col-7 {
+    width: 840px;
+  }
+  .col-8 {
+    width: 960px;
+  }
+  /* push pull */
+  
+  .push-1 {
+    left: 120px;
+  }
+  .push-2 {
+    left: 240px;
+  }
+  .push-3 {
+    left: 360px;
+  }
+  .push-4 {
+    left: 480px;
+  }
+  .push-5 {
+    left: 600px;
+  }
+  .push-6 {
+    left: 720px;
+  }
+  .push-7 {
+    left: 840px;
+  }
+  .push-8 {
+    left: 960px;
+  }
+  .pull-1 {
+    right: 120px;
+  }
+  .pull-2 {
+    right: 240px;
+  }
+  .pull-3 {
+    right: 360px;
+  }
+  .pull-4 {
+    right: 480px;
+  }
+  .pull-5 {
+    right: 600px;
+  }
+  .pull-6 {
+    right: 720px;
+  }
+  .pull-7 {
+    right: 840px;
+  }
+  .pull-8 {
+    right: 960px;
+  }
+  /* prefix suffix*/
+  
+  .prefix-1 {
+    margin-left: 120px;
+  }
+  .prefix-2 {
+    margin-left: 240px;
+  }
+  .prefix-3 {
+    margin-left: 360px;
+  }
+  .prefix-4 {
+    margin-left: 480px;
+  }
+  .prefix-5 {
+    margin-left: 600px;
+  }
+  .prefix-6 {
+    margin-left: 720px;
+  }
+  .prefix-7 {
+    margin-left: 840px;
+  }
+  .prefix-8 {
+    margin-left: 960px;
+  }
+  .suffix-1 {
+    margin-right: 120px;
+  }
+  .suffix-2 {
+    margin-right: 240px;
+  }
+  .suffix-3 {
+    margin-right: 360px;
+  }
+  .suffix-4 {
+    margin-right: 480px;
+  }
+  .suffix-5 {
+    margin-right: 600px;
+  }
+  .suffix-6 {
+    margin-right: 720px;
+  }
+  .suffix-7 {
+    margin-right: 840px;
+  }
+  .suffix-8 {
+    margin-right: 960px;
+  }
