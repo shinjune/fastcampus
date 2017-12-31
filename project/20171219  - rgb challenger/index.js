@@ -1,12 +1,8 @@
 let stage;
 let problem;
-let correctAnwser;
-
+let correctAnswer;
+let score;
 // 코드 잘 때 어떤 상태들을 미리 변수 또는 객체로 설정해 놓고 그림을 그려본다
-// points
-// questions
-// right answer
-let myPoints;
 
 function random255() {
   return Math.floor(Math.random() * 256)
@@ -17,31 +13,31 @@ function randomColor() {
 }
 
 function nextStage() {
-  stage++;
+  stage++
   problem = [randomColor(), randomColor(), randomColor()]
-  correctAnwser = Math.floor(Math.random() * 3)
+  correctAnswer = Math.floor(Math.random() * 3)
 }
 
 function draw() {
   document.querySelectorAll('.box').forEach((el, index) => {
     el.style.backgroundColor = problem[index]
   })
-  document.querySelector('.rgb-text').textContent = problem[correctAnwser]
-  document.querySelector('.score').textContent = stage;
+  document.querySelector('.rgb-text').textContent = problem[correctAnswer]
+  document.querySelector('.score').textContent = stage
+  document.querySelector('.wrong-score').textContent = stage
 }
 
 function init() {
   stage = 0;
   problem = [randomColor(), randomColor(), randomColor()]
-  correctAnwser = Math.floor(Math.random() * 3)
+  correctAnswer = Math.floor(Math.random() * 3)
 }
-
 
 document.querySelectorAll('.box').forEach((el, index) => {
   el.addEventListener('click', e => {
 
     el.classList.add('show');
-    if (index === correctAnwser) {
+    if (index === correctAnswer) {
       // 다음 단계에 대한 상태로 넘어감
       // nextStage();
       // draw();

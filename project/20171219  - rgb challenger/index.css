@@ -1,15 +1,15 @@
 .box {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 15px;
   cursor: pointer;
   transition: transform 0.65s ease;
   /* transition: transfrom 0.65s ease은 box안에 있어야 한다. 왜냐면 .box.show에 있으면
   .box.show가 사라지면 같이 사라지기 때문 */
 }
 .box.show {
-  transform: scale(50)
+  transform: scale(45)
 }
 .boxes {
   display: flex;
@@ -20,7 +20,7 @@ html, body {
   padding: 0;
   overflow: hidden;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 .wrap {
   display: flex;
@@ -31,15 +31,27 @@ html, body {
   background-color: steelblue;
   text-align: center;
   padding: 20px;
+  height: 150px;
+}
+.score, .first-score-css {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+.rgb-text {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
 }
 .bottom {
   flex-grow: 1;
-  background-color: #232323;
+  background-color: black;
   display: flex;
   flex-direction: column;
 }
 .top div:nth-child(2) {
-  font-size: 3em;
+  font-size: 4em;
 }
 .game-center {
   flex-grow: 1;
@@ -65,13 +77,37 @@ html, body {
 .modal.show {
   display: flex;
 }
+.modal-title, .modal-score {
+  font-size: 5em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.modal-score {
+  margin-bottom: 10px;
+}
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* .modal.show 붙여써야 한다. */
 
 .modal-button {
-  border: 1px solid white;
+  border: 5px solid white;
+  border-radius: 10px;
   cursor: pointer;
   padding: 10px;
+  font-weight: 500;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 0 auto;
+  display: inline-block;
+}
+.second-score-css {
+  font-size: 3em;
+  margin-bottom: 50px;
+  font-weight: 500;
 }
 
 /*
