@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.complete {
+  color: steelblue;
+  font-style: italic;
+  text-decoration: line-through;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.container {
+  position: absolute;
+  width: 1080px;
+  left: 50px;
+}
+.header {
+  margin-bottom: 50px;
+}
+.todo-input {
+  width: 40%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px solid steelblue;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.add-button {
+  font-size: 17px;
+  padding: 9px;
+  vertical-align: middle;
+  border-radius: 10px solid steelblue;
+}
+.todo-list {
+  position: relative;
+}
+.closeButton {
+  font-size: 17px;
+  color: red;
+}
